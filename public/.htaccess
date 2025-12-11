@@ -1,0 +1,16 @@
+# Disable directory listing
+Options -Indexes
+# Enable symbolic links 
+Options +FollowSymlinks
+
+<IfModule mod_rewrite.c>
+    
+    RewriteEngine on
+    # Prevent Direct Access to Files and Folders 
+    RewriteCond %[REQUEST_FILENAME] !-d
+    RewriteCond %[REQUEST_FILENAME] !-f
+    # Prevent Directory Listing
+    RewriteCond %[REQUEST_FILENAME] !-Indexes
+    # Route All Requests to index.php
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>

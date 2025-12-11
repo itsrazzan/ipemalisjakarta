@@ -1,0 +1,16 @@
+# Dependency folders
+node_modules/
+.pnp/
+.next/
+dist/
+build/
+
+# Tailwind cache
+.tailwindcache/
+.turbo/
+
+# System files
+.DS_Store
+.env*
+.vscode/
+*.log
