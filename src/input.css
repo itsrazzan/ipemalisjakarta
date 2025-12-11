@@ -1,4 +1,21 @@
 @import "tailwindcss";
-@theme {
-    
+
+/* Custom CSS variables */
+:root {
+    --color-primary: #003366;
 }
+
+/* Example custom class using Tailwind's @apply (must be after the import)
+     This will be included in the generated `public/output.css`.
+*/
+.btn-primary {
+    @apply px-4 py-2 bg-blue-500 text-white rounded;
+}
+
+/* Plain CSS example
+.custom-box {
+    background: var(--color-primary);
+    color: white;
+    padding: 1rem;
+}
+*/
