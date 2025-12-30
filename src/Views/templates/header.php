@@ -14,49 +14,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($data['title']); ?></title>
-    <!-- <link rel="stylesheet" href="<?php echo $data['BASE_URL']; ?>/css/style.css"> -->
+    <link rel="stylesheet" href="<?php echo $BASE_URL; ?>/public/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding-top: 60px; } /* Padding top untuk navbar tetap */
-        .navbar { 
-            background-color: #007bff; /* Warna biru untuk identitas */
-            overflow: hidden; 
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: fixed; /* Membuat navbar tetap di atas */
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        .navbar a { 
-            float: left; 
-            display: block; 
-            color: white; 
-            text-align: center; 
-            padding: 18px 20px; 
-            text-decoration: none; 
-            font-weight: 500;
-            transition: background-color 0.3s;
-        }
-        .navbar a:hover { 
-            background-color: #0056b3; 
-        }
-        .container { 
-            padding: 20px; 
-            max-width: 1000px;
-            margin: auto;
-        }
     </style>
 </head>
 <body>
+<!-- Header Navigation -->
+<header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
+    <nav class="container mx-auto px-4 lg:px-8">
+        <div class="flex items-center justify-between h-20 lg:h-24">
+            <!-- Logo -->
+            <div class="flex items-center space-x-3">
+                <img src="assets/images/logo-ipemalis.png" alt="Logo IPEMALIS Jakarta - Ikatan Pemuda Mahasiswa Kabupaten Bengkalis" class="h-12 lg:h-16 w-auto">
+                <div class="hidden lg:block">
+                    <div class="text-sm lg:text-base font-bold text-[#02293D]">IPEMALIS Jakarta</div>
+                    <div class="text-xs text-[#065996]">Pemuda Mahasiswa Bengkalis</div>
+                </div>
+            </div>
 
-<nav class="navbar">
-    <a href="<?php echo $BASE_URL; ?>/">IPEMALIS</a>
-    <a href="<?php echo $BASE_URL; ?>/home">Home</a>
-    <a href="<?php echo $BASE_URL; ?>/profile">Profile</a>
-    <a href="<?php echo $BASE_URL; ?>/activities">Kegiatan</a>
-    <a href="<?php echo $BASE_URL; ?>/team">Tim</a>
-    
-    <a href="<?php echo $BASE_URL; ?>/account/login" style="float: right;">Login</a>
-</nav>
+            <!-- Desktop Navigation -->
+            <ul class="hidden lg:flex items-center space-x-8 xl:space-x-12">
+                <li><a href="#beranda" class="nav-link text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Beranda</a></li>
+                <li><a href="#profil" class="nav-link text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Profil</a></li>
+                <li><a href="#kegiatan" class="nav-link text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Kegiatan</a></li>
+                <li><a href="#berita" class="nav-link text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Berita</a></li>
+                <li><a href="#gabung" class="inline-block px-6 py-2.5 bg-[#065996] text-white rounded-full hover:bg-[#02293D] transition-all duration-300 font-medium shadow-md hover:shadow-lg">Gabung</a></li>
+            </ul>
 
-<div class="container">
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="lg:hidden p-2 rounded-lg hover:bg-[#E6EFFE] transition-colors duration-300" aria-label="Toggle mobile menu">
+                <svg class="w-6 h-6 text-[#02293D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path class="hamburger-top" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+                    <path class="hamburger-middle" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+                    <path class="hamburger-bottom" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white shadow-lg rounded-b-2xl overflow-hidden">
+            <ul class="py-4 space-y-1">
+                <li><a href="#beranda" class="mobile-nav-link block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Beranda</a></li>
+                <li><a href="#profil" class="mobile-nav-link block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Profil</a></li>
+                <li><a href="#kegiatan" class="mobile-nav-link block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Kegiatan</a></li>
+                <li><a href="#berita" class="mobile-nav-link block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Berita</a></li>
+                <li class="px-6 py-3"><a href="#gabung" class="block text-center px-6 py-2.5 bg-[#065996] text-white rounded-full hover:bg-[#02293D] transition-all duration-300 font-medium">Gabung</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>

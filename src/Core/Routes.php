@@ -13,37 +13,48 @@ class Routes {
 
     // Konstruktor untuk inisialisasi kelas Routes
     public function __construct() {
-        echo "<br> Hello World from core/Routes.php inside the Routes class<br>";
+        //echo "<br> Hello World from core/Routes.php inside the Routes class<br>";
     //     $url = $this->parseURL();
     //   var_dump($url);
     }
 
     public function parseURL()
     {
-    // 1. Ambil path dari REQUEST_URI. 
-    // REQUEST_URI berisi path URL, misalnya '/profil' atau '/produk/123?q=test'
-    if ( isset($_SERVER['REQUEST_URI']) ) {
-        
-        $url = $_SERVER['REQUEST_URI'];
-        
-        // 2. Bersihkan query string (data setelah tanda '?')
-        $url = strtok($url, '?');
+        // 1. Ambil path dari REQUEST_URI. 
+        // REQUEST_URI berisi path URL, misalnya '/Ipemalis/profil' atau '/Ipemalis/produk/123?q=test'
+        if (isset($_SERVER['REQUEST_URI'])) {
+            
+            $url = $_SERVER['REQUEST_URI'];
+            
+            // 2. Bersihkan query string (data setelah tanda '?')
+            $url = strtok($url, '?');
 
-        // 3. Hapus leading dan trailing slash, dan sanitasi
-        $url = trim($url, '/'); 
-        $url = filter_var($url, FILTER_SANITIZE_URL);
-        
-        // 4. Pecah segmen URL dan return
-        $url = explode('/', $url);
-        
-        // Hapus elemen array kosong yang mungkin terjadi
-        $url = array_filter($url); 
-        //reset keys setelah array_filter
-        return array_values($url);
-    }
+            // 3. Hapus leading dan trailing slash, dan sanitasi
+            $url = trim($url, '/'); 
+            $url = filter_var($url, FILTER_SANITIZE_URL);
+            
+            // 4. Hapuskan BASE_URL prefix dari URL path
+            // Jika URL dimulai dengan 'Ipemalis', hapus bagian itu
+            $baseUrlPath = trim(BASE_URL, '/'); // Ambil 'Ipemalis' dari '/Ipemalis'
+            if (!empty($baseUrlPath)) {
+                // Jika URL dimulai dengan base path, hapus
+                if (strpos($url, $baseUrlPath) === 0) {
+                    $url = substr($url, strlen($baseUrlPath));
+                    $url = ltrim($url, '/'); // Hapus slash di depan setelah BASE_URL
+                }
+            }
+            
+            // 5. Pecah segmen URL dan return
+            $url = explode('/', $url);
+            
+            // Hapus elemen array kosong yang mungkin terjadi
+            $url = array_filter($url); 
+            // Reset keys setelah array_filter
+            return array_values($url);
+        }
 
-    // Jika REQUEST_URI tidak ada (jarang), kembalikan array kosong atau default
-    return [$this->controller]; 
+        // Jika REQUEST_URI tidak ada (jarang), kembalikan array kosong atau default
+        return [$this->controller]; 
     }
 
     public function run() 

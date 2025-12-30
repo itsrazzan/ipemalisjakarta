@@ -13,13 +13,13 @@ class Controller
     {
 
         // Pastikan BASE_URL tersedia di setiap view
-        // if (!defined('BASE_URL')) {
-        //     // Fallback jika BASE_URL belum didefinisikan (seharusnya tidak terjadi)
-        //     $data['BASE_URL'] = ''; 
-        // } else {
-        //     // Tambahkan BASE_URL ke data yang diteruskan ke view
-        //     $data['BASE_URL'] = BASE_URL; 
-        // }
+        if (!defined('BASE_URL')) {
+            // Fallback jika BASE_URL belum didefinisikan (seharusnya tidak terjadi)
+            $data['BASE_URL'] = '';
+        } else {
+            // Tambahkan BASE_URL ke data yang diteruskan ke view
+            $data['BASE_URL'] = BASE_URL;
+        }
 
         // Ubah array $data menjadi variabel lokal ($title, $user, dll.)
         extract($data); 
