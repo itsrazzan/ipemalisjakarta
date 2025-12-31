@@ -130,6 +130,28 @@
             width: 24px !important;
             height: 24px !important;
         }
+
+        /* Navigation Link Underline Effect - Muncul dari tengah ke tepi */
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: #065996;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+            left: 0;
+        }
     </style>
 </head>
 
@@ -137,27 +159,13 @@
 <!-- Header Navigation -->
 <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
     <nav class="container mx-auto px-4 lg:px-8">
-        <div class="flex items-center justify-between h-20 lg:h-24">
-            <!-- Logo -->
-            <div class="flex items-center space-x-3">
-                <img src="public/img/logo_IPEMALIS.png" alt="Logo IPEMALIS Jakarta - Ikatan Pemuda Mahasiswa Kabupaten Bengkalis" class="h-12 lg:h-16 w-auto">
-                <div class="hidden lg:block">
-                    <div class="text-sm lg:text-base font-bold text-[#02293D]">IPEMALIS Jakarta</div>
-                    <div class="text-xs text-[#065996]">Pemuda Mahasiswa Bengkalis</div>
-                </div>
-            </div>
-
-            <!-- Desktop Navigation -->
-            <ul class="hidden lg:flex items-center space-x-8 xl:space-x-12">
-                <li><a href="#beranda" class="nav-link text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Beranda</a></li>
-                <li><a href="#profil" class="nav-link text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Profil</a></li>
-                <li><a href="#kegiatan" class="nav-link text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Kegiatan</a></li>
-                <li><a href="#berita" class="nav-link text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Berita</a></li>
-                <li><a href="#gabung" class="inline-block px-6 py-2.5 bg-[#065996] text-white rounded-full hover:bg-[#02293D] transition-all duration-300 font-medium shadow-md hover:shadow-lg">Gabung</a></li>
-            </ul>
-
+        <!-- Mobile Header (Logo + Hamburger) -->
+        <div class="lg:hidden flex items-center justify-between h-20">
+            <!-- Site Name for Mobile -->
+            <a href="<?php echo $BASE_URL; ?>/" class="text-lg font-bold text-[#02293D] hover:text-[#065996] transition-colors duration-300 nav-link-prevent">IPEMALIS Jakarta</a>
+            
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="lg:hidden p-2 rounded-lg hover:bg-[#E6EFFE] transition-colors duration-300" aria-label="Toggle mobile menu">
+            <button id="mobile-menu-button" class="p-2 rounded-lg hover:bg-[#E6EFFE] transition-colors duration-300" aria-label="Toggle mobile menu">
                 <svg class="w-6 h-6 text-[#02293D]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path class="hamburger-top" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
                     <path class="hamburger-middle" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
@@ -166,15 +174,47 @@
             </button>
         </div>
 
+        <!-- Desktop Navigation (Centered) -->
+        <div class="hidden lg:flex items-center justify-center h-24 relative">
+            <!-- Site Name for Desktop (Left) -->
+            <a href="<?php echo $BASE_URL; ?>/" class="absolute left-0 text-xl font-bold text-[#02293D] hover:text-[#065996] transition-colors duration-300 nav-link-prevent">IPEMALIS Jakarta</a>
+            
+            <ul class="flex items-center space-x-8 xl:space-x-12">
+                <li><a href="<?php echo $BASE_URL; ?>/" class="nav-link nav-link-prevent text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Home</a></li>
+                <li><a href="<?php echo $BASE_URL; ?>/about" class="nav-link nav-link-prevent text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">About</a></li>
+                <li><a href="<?php echo $BASE_URL; ?>/team" class="nav-link nav-link-prevent text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Our Team</a></li>
+                <li><a href="<?php echo $BASE_URL; ?>/activities" class="nav-link nav-link-prevent text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Activities</a></li>
+                <li><a href="<?php echo $BASE_URL; ?>/news" class="nav-link nav-link-prevent text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">News</a></li>
+                <li><a href="<?php echo $BASE_URL; ?>/joinus" class="nav-link nav-link-prevent text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Join Us</a></li>
+            </ul>
+        </div>
+
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="lg:hidden hidden bg-white shadow-lg rounded-b-2xl overflow-hidden">
             <ul class="py-4 space-y-1">
-                <li><a href="#beranda" class="mobile-nav-link block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Beranda</a></li>
-                <li><a href="#profil" class="mobile-nav-link block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Profil</a></li>
-                <li><a href="#kegiatan" class="mobile-nav-link block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Kegiatan</a></li>
-                <li><a href="#berita" class="mobile-nav-link block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Berita</a></li>
-                <li class="px-6 py-3"><a href="#gabung" class="block text-center px-6 py-2.5 bg-[#065996] text-white rounded-full hover:bg-[#02293D] transition-all duration-300 font-medium">Gabung</a></li>
+                <li><a href="<?php echo $BASE_URL; ?>/" class="mobile-nav-link nav-link-prevent block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Home</a></li>
+                <li><a href="<?php echo $BASE_URL; ?>/about" class="mobile-nav-link nav-link-prevent block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">About</a></li>
+                <li><a href="<?php echo $BASE_URL; ?>/team" class="mobile-nav-link nav-link-prevent block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Our Team</a></li>
+                <li><a href="<?php echo $BASE_URL; ?>/activities" class="mobile-nav-link nav-link-prevent block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Activities</a></li>
+                <li><a href="<?php echo $BASE_URL; ?>/news" class="mobile-nav-link nav-link-prevent block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">News</a></li>
+                <li><a href="<?php echo $BASE_URL; ?>/joinus" class="mobile-nav-link nav-link-prevent block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Join Us</a></li>
             </ul>
         </div>
     </nav>
 </header>
+
+<!-- Script: Prevent reload if already on same page -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var navLinks = document.querySelectorAll('.nav-link-prevent');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            var linkPath = new URL(this.href).pathname;
+            var currentPath = window.location.pathname;
+            if (linkPath === currentPath) {
+                e.preventDefault();
+            }
+        });
+    });
+});
+</script>

@@ -3,14 +3,14 @@
 namespace App\Controllers;
 use App\Core\Controller;
 
-class Team extends Controller {
+class Joinus extends Controller {
     public function index() {
         
-        $data ['title'] = "Our Team | IPEMALIS Jakarta";
+        $data ['title'] = "Join Us | IPEMALIS Jakarta";
 
         //memanggil view (template)
         $this -> view('templates/header', $data);
-        $this -> view('team/index', $data);
+        $this -> view('joinus/index', $data);
         $this -> view('templates/footer');
 
     }

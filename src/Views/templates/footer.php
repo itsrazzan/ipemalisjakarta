@@ -67,5 +67,8 @@
     </div>
 </footer>
 
+<!-- JavaScript for all pages -->
+<script src="<?php echo $BASE_URL; ?>/public/js/animation.js"></script>
+
 </body>
 </html>
