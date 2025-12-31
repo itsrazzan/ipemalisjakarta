@@ -454,11 +454,14 @@ function initScrollToTopButton() {
     // Create button element
     const scrollTopBtn = document.createElement('button');
     scrollTopBtn.innerHTML = `
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        <svg class="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display: flex; align-items: center; justify-content: center;">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
         </svg>
     `;
-    scrollTopBtn.className = 'fixed bottom-8 right-8 bg-primary-blue text-white w-12 h-12 rounded-full shadow-lg hover:bg-primary-text transition-all duration-300 opacity-0 pointer-events-none z-40';
+    scrollTopBtn.className = 'fixed bottom-8 right-8 bg-primary-blue text-white w-12 h-12 rounded-full shadow-lg hover:bg-primary-text transition-all duration-300 opacity-0 pointer-events-none z-40 flex items-center justify-center p-0';
+    scrollTopBtn.style.display = 'flex';
+    scrollTopBtn.style.alignItems = 'center';
+    scrollTopBtn.style.justifyContent = 'center';
     scrollTopBtn.id = 'scroll-to-top';
     scrollTopBtn.setAttribute('aria-label', 'Scroll to top');
     

@@ -13,20 +13,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
     <title><?php echo htmlspecialchars($data['title']); ?></title>
+    <meta name="description" content="IPEMALIS Jakarta adalah organisasi pemuda mahasiswa Bengkalis di Tangerang Selatan dan Ciputat. Wadah keluarga mahasiswa Bengkalis Jakarta untuk berkarya, berkreasi dan mengembangkan potensi pemuda daerah.">
+    <meta name="keywords" content="ipemalis jakarta, organisasi pemuda mahasiswa bengkalis, mahasiswa bengkalis jakarta, organisasi mahasiswa tangerang selatan, organisasi mahasiswa ciputat, keluarga mahasiswa bengkalis, ikatan pemuda bengkalis, organisasi kreatif pemuda, mahasiswa bengkalis di jakarta, komunitas mahasiswa bengkalis, pemuda bengkalis jakarta, ikatan mahasiswa bengkalis jakarta, organisasi kepemudaan bengkalis, mahasiswa perantauan bengkalis">
+    <meta name="author" content="IPEMALIS Jakarta">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Indonesian">
+    <meta name="geo.region" content="ID-BT">
+    <meta name="geo.placename" content="Tangerang Selatan, Ciputat">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+    <!-- Google Fonts - Sora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sora': ['Sora', 'sans-serif']
+                    },
+                    colors: {
+                        'primary-bg': '#F6FCFF',
+                        'primary-blue': '#065996',
+                        'primary-text': '#02293D',
+                        'light-blue-bg': '#E6EFFE',
+                        'dark-section': '#263151'
+                    },
+                    maxWidth: {
+                        'content': '1080px'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="<?php echo $BASE_URL; ?>/public/css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <style>
+        * {
+            font-family: 'Sora', sans-serif;
+        }
+        
+        body {
+            background-color: #F6FCFF;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Scroll to Top Button Styling */
+        #scroll-to-top {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            padding: 0 !important;
+            border: none;
+            cursor: pointer;
+            line-height: 1 !important;
+        }
+
+        #scroll-to-top svg {
+            display: block !important;
+            margin: 0 !important;
+            width: 24px !important;
+            height: 24px !important;
+        }
     </style>
 </head>
-<body>
+
+<body class="antialiased">
 <!-- Header Navigation -->
 <header id="main-header" class="fixed top-0 left-0 w-full z-50 transition-all duration-300">
     <nav class="container mx-auto px-4 lg:px-8">
         <div class="flex items-center justify-between h-20 lg:h-24">
             <!-- Logo -->
             <div class="flex items-center space-x-3">
-                <img src="assets/images/logo-ipemalis.png" alt="Logo IPEMALIS Jakarta - Ikatan Pemuda Mahasiswa Kabupaten Bengkalis" class="h-12 lg:h-16 w-auto">
+                <img src="public/img/logo_IPEMALIS.png" alt="Logo IPEMALIS Jakarta - Ikatan Pemuda Mahasiswa Kabupaten Bengkalis" class="h-12 lg:h-16 w-auto">
                 <div class="hidden lg:block">
                     <div class="text-sm lg:text-base font-bold text-[#02293D]">IPEMALIS Jakarta</div>
                     <div class="text-xs text-[#065996]">Pemuda Mahasiswa Bengkalis</div>
