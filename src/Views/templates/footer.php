@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer id="gabung" class="bg-dark-section  text-white py-12 lg:py-16">
+<footer id="gabung" class="bg-dark-section lg:text-white py-12 lg:py-16">
     <div class="container mx-auto px-4 lg:px-8 max-w-content">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
             
