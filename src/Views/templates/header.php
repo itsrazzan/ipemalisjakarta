@@ -175,7 +175,7 @@
         </div>
 
         <!-- Desktop Navigation (Centered) -->
-        <div class="hidden lg:flex items-center justify-center h-24 relative">
+        <div class="hidden lg:flex items-center justify-center h-16 relative">
             <!-- Site Name for Desktop (Left) -->
             <a href="<?php echo $BASE_URL; ?>/" class="absolute left-0 text-xl font-bold text-[#02293D] hover:text-[#065996] transition-colors duration-300 nav-link-prevent">IPEMALIS Jakarta</a>
             
