@@ -25,8 +25,8 @@
     <meta name="geo.placename" content="Tangerang Selatan, Ciputat">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="<?php echo $BASE_URL; ?>/img/logo_IPEMALIS.png">
+    <link rel="apple-touch-icon" href="<?php echo $BASE_URL; ?>/img/logo_IPEMALIS.png">
 
     <!-- Google Fonts - Sora -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,7 +58,7 @@
     </script>
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="<?php echo $BASE_URL; ?>/public/css/style.css">
+    <link rel="stylesheet" href="<?php echo $BASE_URL; ?>/css/style.css">
 
     <style>
         * {

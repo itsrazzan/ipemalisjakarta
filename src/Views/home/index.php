@@ -18,7 +18,7 @@
 
                 <!-- Right Content - Logo -->
                 <div class="slide-in-right flex justify-center lg:justify-end">
-                    <img src="public/img/logo_IPEMALIS.png" alt="Logo IPEMALIS Jakarta - Ikatan Pemuda Mahasiswa Kabupaten Bengkalis" class="w-64 lg:w-80 xl:w-96 h-auto">
+                    <img src="<?php echo $BASE_URL; ?>/img/logo_IPEMALIS.png" alt="Logo IPEMALIS Jakarta - Ikatan Pemuda Mahasiswa Kabupaten Bengkalis" class="w-64 lg:w-80 xl:w-96 h-auto">
                 </div>
             </div>
         </div>
@@ -171,7 +171,7 @@
     <section id="kegiatan" class="py-12 lg:py-16 bg-dark-section">
         <div class="container mx-auto px-4 lg:px-8 max-w-content">
             <div class="relative rounded-3xl shadow-2xl overflow-hidden scale-in group">
-                <img src="public/img/home_statistika1.png" alt="Statistik Capaian Program 2024-2025" class="w-full h-auto">
+                <img src="<?php echo $BASE_URL; ?>/img/home_statistika1.png" alt="Statistik Capaian Program 2024-2025" class="w-full h-auto">
                 <div class="absolute inset-x-0 top-0 p-8 lg:p-12">
                     <h3 class="text-xl lg:text-2xl xl:text-3xl font-bold text-blue-900 leading-tight mb-6 drop-shadow-md">
                         Klasifikasi Capaian Kegiatan Berdasarkan:
@@ -194,7 +194,7 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                     <!-- Card 1 -->
                     <div class="relative rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64 overflow-hidden scale-in group">
-                        <img src="public/img/home_pembuatanLegalitas.jpeg" alt="Pembuatan Legalitas & Rekening Organisasi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="<?php echo $BASE_URL; ?>/img/home_pembuatanLegalitas.jpeg" alt="Pembuatan Legalitas & Rekening Organisasi" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-x-0 bottom-0 p-6 lg:p-8 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/50 to-transparent pt-12">
                             <h4 class="text-lg lg:text-xl font-semibold text-white drop-shadow-sm">
                                 Pembuatan Legalitas & Rekening Organisasi 
@@ -204,7 +204,7 @@
 
                     <!-- Card 2 -->
                     <div class="relative rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64 overflow-hidden scale-in group" style="transition-delay: 0.1s;">
-                        <img src="public/img/home_webinarILC.jpeg" alt="IPEMALIS Learning Center" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="<?php echo $BASE_URL; ?>/img/home_webinarILC.jpeg" alt="IPEMALIS Learning Center" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-x-0 bottom-0 p-6 lg:p-8 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/50 to-transparent pt-12">
                             <h4 class="text-lg lg:text-xl font-semibold text-white drop-shadow-sm">
                                 IPEMALIS Learning Center
@@ -214,7 +214,7 @@
 
                     <!-- Card 3 -->
                     <div class="relative rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64 overflow-hidden scale-in group" style="transition-delay: 0.2s;">
-                        <img src="public/img/home_sanggarKompang.jpeg" alt="Sanggar Tuah Seri Melayu" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="<?php echo $BASE_URL; ?>/img/home_sanggarKompang.jpeg" alt="Sanggar Tuah Seri Melayu" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-x-0 bottom-0 p-6 lg:p-8 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/50 to-transparent pt-12">
                             <h4 class="text-lg lg:text-xl font-semibold text-white drop-shadow-sm">
                                 Sanggar Tuah Seri Melayu
@@ -224,7 +224,7 @@
 
                     <!-- Card 4 -->
                     <div class="relative rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64 overflow-hidden scale-in group" style="transition-delay: 0.3s;">
-                        <img src="public/img/home_halalBihalal.jpeg" alt="Halal Bihalal Akbar Mahasiswa Bengkalis" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="<?php echo $BASE_URL; ?>/img/home_halalBihalal.jpeg" alt="Halal Bihalal Akbar Mahasiswa Bengkalis" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-x-0 bottom-0 p-6 lg:p-8 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/50 to-transparent pt-12">
                             <h4 class="text-lg lg:text-xl font-semibold text-white drop-shadow-sm">
                                 Halal Bihalal Akbar Mahasiswa Bengkalis se-Indonesia

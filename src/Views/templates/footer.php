@@ -6,7 +6,7 @@
             <!-- Logo & Description -->
             <div>
                 <div class="flex items-center space-x-3 mb-6">
-                    <img src="public/img/logo_IPEMALIS_white.png" alt="Logo IPEMALIS Jakarta" class="h-16 w-auto">
+                    <img src="<?php echo $BASE_URL; ?>/img/logo_IPEMALIS_white.png" alt="Logo IPEMALIS Jakarta" class="h-16 w-auto">
                 </div>
                 <p class="text-white leading-relaxed">
                     Bersama Menjaga Akar, Meraih Masa Depan! Organisasi pemuda mahasiswa Bengkalis di Jakarta.
@@ -67,7 +67,7 @@
 </footer>
 
 <!-- JavaScript for all pages -->
-<script src="<?php echo $BASE_URL; ?>/public/js/animation.js"></script>
+<script src="<?php echo $BASE_URL; ?>/js/animation.js"></script>
 
 </body>
 </html>

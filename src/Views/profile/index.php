@@ -30,8 +30,8 @@
     <link rel="canonical" href="https://ipemalisjakarta.org/profil">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="<?php echo $BASE_URL; ?>/img/logo_IPEMALIS.png">
+    <link rel="apple-touch-icon" href="<?php echo $BASE_URL; ?>/img/logo_IPEMALIS.png">
 
     <!-- Google Fonts - Sora -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -407,8 +407,8 @@
     <?php include 'footer.html'; ?>
 
     <!-- JavaScript for Profil Page -->
-    <script src="public/js/animations.js"></script>
-    <script src="public/js/profil.js"></script>
+    <script src="<?php echo $BASE_URL; ?>/js/animations.js"></script>
+    <script src="<?php echo $BASE_URL; ?>/js/profil.js"></script>
 
 </body>
 </html>

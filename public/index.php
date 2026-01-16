@@ -5,9 +5,10 @@
 
 // 1. Definisikan Base Directory
 define('BASEPATH', dirname(__DIR__) . DIRECTORY_SEPARATOR);
-// Definisikan BASE_URL (ubah sesuai subfolder tempat proyek berada)
-// Jika Anda mengakses proyek di http://localhost/Ipemalis, gunakan '/Ipemalis'
-define('BASE_URL', '/Ipemalis'); 
+// Definisikan BASE_URL
+// Untuk virtual host (ipemalis.test) dan production, gunakan kosong
+// Untuk localhost/Ipemalis, ganti ke '/Ipemalis'
+define('BASE_URL', ''); 
 
 // 2. Load Autoloader atau Manual Load (sementara)
 // Karena kita belum menggunakan Autoloader, kita load Routes secara manual
