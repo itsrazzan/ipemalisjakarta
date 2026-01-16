@@ -1,14 +1,6 @@
 <IfModule mod_rewrite.c>
- RewriteEngine On
- RewriteBase /
+    RewriteEngine on
+    RewriteRule ^$ public/ [L]
+    RewriteRule (.*) public/$1 [L]
 
- # Jika yang diminta adalah root (domain tanpa path), arahkan ke /public/
- RewriteRule ^$ public/ [L]
-
- # Jangan rewrite kalau file/folder fisik memang ada
- RewriteCond %{REQUEST_FILENAME} !-f
- RewriteCond %{REQUEST_FILENAME} !-d
-
- # Selain itu, arahkan ke /public/...
- RewriteRule ^(.*)$ public/$1 [L]
-</IfModule
+</IfModule>

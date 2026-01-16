@@ -1,12 +1,12 @@
 <!-- Footer -->
-<footer id="gabung" class="bg-dark-section lg:text-white py-12 lg:py-16">
+<footer id="gabung" class="bg-dark-section  text-white py-12 lg:py-16">
     <div class="container mx-auto px-4 lg:px-8 max-w-content">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-12">
             
             <!-- Logo & Description -->
             <div>
                 <div class="flex items-center space-x-3 mb-6">
-                    <img src="public/img/logo_IPEMALIS_white.png" alt="Logo IPEMALIS Jakarta" class="h-16 w-auto">
+                    <img src="<?php echo $BASE_URL; ?>/img/logo_IPEMALIS_white.png" alt="Logo IPEMALIS Jakarta" class="h-16 w-auto">
                 </div>
                 <p class="text-white leading-relaxed">
                     Bersama Menjaga Akar, Meraih Masa Depan! Organisasi pemuda mahasiswa Bengkalis di Jakarta.
@@ -67,7 +67,7 @@
 </footer>
 
 <!-- JavaScript for all pages -->
-<script src="<?php echo $BASE_URL; ?>/public/js/animation.js"></script>
+<script src="<?php echo $BASE_URL; ?>/js/animation.js"></script>
 
 </body>
 </html>
