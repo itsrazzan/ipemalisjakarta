@@ -224,7 +224,7 @@
 
                     <!-- Card 4 -->
                     <div class="relative rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 h-64 overflow-hidden scale-in group" style="transition-delay: 0.3s;">
-                        <img src="<?php echo $BASE_URL; ?>/img/home_halalBihalal.jpeg" alt="Halal Bihalal Akbar Mahasiswa Bengkalis" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <img src="<?php echo $BASE_URL; ?>/img/home_halalBiHalal.jpeg" alt="Halal Bihalal Akbar Mahasiswa Bengkalis" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                         <div class="absolute inset-x-0 bottom-0 p-6 lg:p-8 flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/50 to-transparent pt-12">
                             <h4 class="text-lg lg:text-xl font-semibold text-white drop-shadow-sm">
                                 Halal Bihalal Akbar Mahasiswa Bengkalis se-Indonesia

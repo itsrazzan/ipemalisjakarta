@@ -186,6 +186,7 @@
                 <li><a href="<?php echo $BASE_URL; ?>/activities" class="nav-link nav-link-prevent text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Activities</a></li>
                 <li><a href="<?php echo $BASE_URL; ?>/news" class="nav-link nav-link-prevent text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">News</a></li>
                 <li><a href="<?php echo $BASE_URL; ?>/joinus" class="nav-link nav-link-prevent text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Join Us</a></li>
+                <li><a href="<?php echo $BASE_URL; ?>/datacollection" class="nav-link nav-link-prevent text-[#02293D] hover:text-[#065996] font-medium transition-colors duration-300">Data Collection</a></li>
             </ul>
         </div>
 
@@ -198,6 +199,7 @@
                 <li><a href="<?php echo $BASE_URL; ?>/activities" class="mobile-nav-link nav-link-prevent block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Activities</a></li>
                 <li><a href="<?php echo $BASE_URL; ?>/news" class="mobile-nav-link nav-link-prevent block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">News</a></li>
                 <li><a href="<?php echo $BASE_URL; ?>/joinus" class="mobile-nav-link nav-link-prevent block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Join Us</a></li>
+                <li><a href="<?php echo $BASE_URL; ?>/datacollection" class="mobile-nav-link nav-link-prevent block px-6 py-3 text-[#02293D] hover:bg-[#E6EFFE] hover:text-[#065996] transition-colors duration-300 font-medium">Data Collection</a></li>
             </ul>
         </div>
     </nav>
